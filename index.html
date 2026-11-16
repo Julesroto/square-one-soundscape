@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Fredoka:wght@400;600&family=VT323&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="ticker" aria-hidden="true"><div class="track">
@@ -19,7 +19,7 @@
     <div class="win">
       <div class="titlebar"><span>SquareOne.exe</span><span class="btns"><i></i><i></i><i></i></span></div>
       <div class="stage" id="stage">
-        <img class="hero-img" src="images/square-one-entrance.jpg" alt="The glass entrance of Square One lit up at dusk">
+        <img class="hero-img" src="square-one-entrance.jpg" alt="The glass entrance of Square One lit up at dusk">
         <div class="shade"></div>
         <div class="stage-text">
           <h1 id="title">Square One</h1>
@@ -44,7 +44,7 @@
         </div>
         <p id="status" class="status" role="status"></p>
       </div>
-      <audio id="main" src="audio/soundscape.mp3" preload="metadata"></audio>
+      <audio id="main" src="soundscape.mp3" preload="metadata"></audio>
     </section>
   </header>
 
@@ -52,19 +52,19 @@
     <h2>Walk through it</h2>
     <p class="lead">The soundscape is a mix of three recordings. Tap a window to hear one on its own.</p>
     <section class="zones" aria-label="Mall sounds">
-      <button class="zone win z-inside" type="button" data-sound="audio/inside.mp3" aria-pressed="false">
+      <button class="zone win z-inside" type="button" data-sound="inside.mp3" aria-pressed="false">
         <span class="titlebar mini">atrium.jpg</span>
-        <span class="shot"><img src="images/square-one-inside.jpg" alt="Inside Square One under the big oval skylight"></span>
+        <span class="shot"><img src="square-one-inside.jpg" alt="Inside Square One under the big oval skylight"></span>
         <span class="label">Inside the mall</span><span class="hint">▶ tap to play</span>
       </button>
-      <button class="zone win z-corridor" type="button" data-sound="audio/corridor.mp3" aria-pressed="false">
+      <button class="zone win z-corridor" type="button" data-sound="corridor.mp3" aria-pressed="false">
         <span class="titlebar mini pink">corridor.jpg</span>
-        <span class="shot"><img src="images/square-one-inside.jpg" alt="Looking down a Square One corridor of shops"></span>
+        <span class="shot"><img src="square-one-inside.jpg" alt="Looking down a Square One corridor of shops"></span>
         <span class="label">The corridor</span><span class="hint">▶ tap to play</span>
       </button>
-      <button class="zone win z-crowd" type="button" data-sound="audio/crowd.mp3" aria-pressed="false">
+      <button class="zone win z-crowd" type="button" data-sound="crowd.mp3" aria-pressed="false">
         <span class="titlebar mini">crowd.jpg</span>
-        <span class="shot"><img src="images/mississauga-night.jpg" alt="Mississauga city centre glowing at night"></span>
+        <span class="shot"><img src="mississauga-night.jpg" alt="Mississauga city centre glowing at night"></span>
         <span class="label">The crowd</span><span class="hint">▶ tap to play</span>
       </button>
     </section>
@@ -74,8 +74,8 @@
     <section class="win">
       <div class="titlebar"><span>mississauga.jpg</span><span class="btns"><i></i><i></i><i></i></span></div>
       <div class="tod" id="tod-stage">
-        <img src="images/mississauga-sunset.jpg" alt="Mississauga's curvy towers at sunset">
-        <img class="night" src="images/mississauga-night.jpg" alt="Mississauga's skyline at night">
+        <img src="mississauga-sunset.jpg" alt="Mississauga's curvy towers at sunset">
+        <img class="night" src="mississauga-night.jpg" alt="Mississauga's skyline at night">
       </div>
       <label class="tod-row">time of day
         <input id="tod" type="range" min="0" max="100" value="0">
@@ -98,6 +98,6 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

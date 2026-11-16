@@ -43,7 +43,7 @@ playBtn.addEventListener("click", async () => {
   setupAudio();
   await audioCtx.resume();
   if (main.paused) {
-    main.play().catch(() => { statusEl.textContent = "Couldn't play audio/soundscape.mp3. Check the file is in the audio folder."; });
+    main.play().catch(() => { statusEl.textContent = "Couldn't play soundscape.mp3. Check the file is in the repo."; });
   } else {
     main.pause();
   }
@@ -51,7 +51,7 @@ playBtn.addEventListener("click", async () => {
 main.addEventListener("play", () => { playBtn.textContent = "❚❚ Pause"; statusEl.textContent = ""; });
 main.addEventListener("pause", () => { playBtn.textContent = "▶ Play soundscape"; });
 main.addEventListener("ended", () => { playBtn.textContent = "▶ Play again"; });
-main.addEventListener("error", () => { statusEl.textContent = "Add your audio file at audio/soundscape.mp3 to hear the soundscape."; });
+main.addEventListener("error", () => { statusEl.textContent = "Add your audio file soundscape.mp3 to hear the soundscape."; });
 ["loadedmetadata", "timeupdate"].forEach((ev) => main.addEventListener(ev, () => {
   if (main.duration) seek.value = (main.currentTime / main.duration) * 1000;
   timeLabel.textContent = `${fmt(main.currentTime)} / ${fmt(main.duration)}`;
