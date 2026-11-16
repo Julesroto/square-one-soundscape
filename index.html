@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Square One is home | Mississauga</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Fredoka:wght@400;600&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ticker" aria-hidden="true"><div class="track">
+    <span>✦ welcome to my hometown ✦ mississauga, ontario ✦ square one is home ✦ press play and walk through it ✦ </span>
+    <span>✦ welcome to my hometown ✦ mississauga, ontario ✦ square one is home ✦ press play and walk through it ✦ </span>
+  </div></div>
+
+  <header class="wrap">
+    <div class="win">
+      <div class="titlebar"><span>SquareOne.exe</span><span class="btns"><i></i><i></i><i></i></span></div>
+      <div class="stage" id="stage">
+        <img class="hero-img" src="images/square-one-entrance.jpg" alt="The glass entrance of Square One lit up at dusk">
+        <div class="shade"></div>
+        <div class="stage-text">
+          <h1 id="title">Square One</h1>
+          <p class="tag">Mississauga, Ontario</p>
+        </div>
+      </div>
+    </div>
+    <p class="bubble">I'm from Mississauga, and Square One feels like home. Hit play and walk through it with your ears.</p>
+
+    <section class="win" aria-label="Soundscape player">
+      <div class="titlebar pink"><span>♪ soundscape.mp3</span><span class="btns"><i></i><i></i><i></i></span></div>
+      <div class="player">
+        <canvas id="viz" aria-hidden="true"></canvas>
+        <div class="readout">
+          <span class="led" id="time">0:00 / 0:00</span>
+          <span class="led led-wrap" aria-hidden="true"><span>SQUARE ONE ✦ MISSISSAUGA ✦ SOUNDSCAPE ✦ </span></span>
+        </div>
+        <div class="controls">
+          <button id="play" class="gloss" type="button">▶ Play soundscape</button>
+          <input id="seek" type="range" min="0" max="1000" value="0" aria-label="Seek through soundscape">
+          <label class="vol">vol <input id="vol" type="range" min="0" max="1" step="0.01" value="0.8"></label>
+        </div>
+        <p id="status" class="status" role="status"></p>
+      </div>
+      <audio id="main" src="audio/soundscape.mp3" preload="metadata"></audio>
+    </section>
+  </header>
+
+  <main class="wrap">
+    <h2>Walk through it</h2>
+    <p class="lead">The soundscape is a mix of three recordings. Tap a window to hear one on its own.</p>
+    <section class="zones" aria-label="Mall sounds">
+      <button class="zone win z-inside" type="button" data-sound="audio/inside.mp3" aria-pressed="false">
+        <span class="titlebar mini">atrium.jpg</span>
+        <span class="shot"><img src="images/square-one-inside.jpg" alt="Inside Square One under the big oval skylight"></span>
+        <span class="label">Inside the mall</span><span class="hint">▶ tap to play</span>
+      </button>
+      <button class="zone win z-corridor" type="button" data-sound="audio/corridor.mp3" aria-pressed="false">
+        <span class="titlebar mini pink">corridor.jpg</span>
+        <span class="shot"><img src="images/square-one-inside.jpg" alt="Looking down a Square One corridor of shops"></span>
+        <span class="label">The corridor</span><span class="hint">▶ tap to play</span>
+      </button>
+      <button class="zone win z-crowd" type="button" data-sound="audio/crowd.mp3" aria-pressed="false">
+        <span class="titlebar mini">crowd.jpg</span>
+        <span class="shot"><img src="images/mississauga-night.jpg" alt="Mississauga city centre glowing at night"></span>
+        <span class="label">The crowd</span><span class="hint">▶ tap to play</span>
+      </button>
+    </section>
+
+    <h2>My city, all day</h2>
+    <p class="lead">Slide from golden hour to city lights.</p>
+    <section class="win">
+      <div class="titlebar"><span>mississauga.jpg</span><span class="btns"><i></i><i></i><i></i></span></div>
+      <div class="tod" id="tod-stage">
+        <img src="images/mississauga-sunset.jpg" alt="Mississauga's curvy towers at sunset">
+        <img class="night" src="images/mississauga-night.jpg" alt="Mississauga's skyline at night">
+      </div>
+      <label class="tod-row">time of day
+        <input id="tod" type="range" min="0" max="100" value="0">
+        <output id="tod-label">Golden hour</output>
+      </label>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <div class="win foot">
+      <div class="titlebar pink"><span>credits.txt</span><span class="btns"><i></i><i></i><i></i></span></div>
+      <div class="foot-body">
+        <p>You are visitor no. <span class="led" id="count">001337</span></p>
+        <ul>
+          <li>Sounds: budfox6, freesound_community and GregorQuendel (Pixabay)</li>
+          <li>Photos: add the source or photographer for each image here</li>
+          <li>Sunset towers image: AI-generated (Google Gemini)</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
